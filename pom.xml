@@ -16,7 +16,7 @@
     <artifactId>demoexample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demoexample</name>
-    <description>Demo Spring Boot application</description>
+    <description>Production-style Spring Boot SRE demo application</description>
 
     <properties>
         <java.version>21</java.version>
@@ -33,6 +33,18 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- Actuator for health, liveness, readiness, metrics -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Prometheus metrics export -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
 
         <!-- Spring Boot Test -->

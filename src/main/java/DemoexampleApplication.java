@@ -14,13 +14,13 @@ public class DemoexampleApplication {
         SpringApplication.run(DemoexampleApplication.class, args);
     }
 
-    // 🔹 Home page (loads login.html)
+    // Home page
     @GetMapping("/")
     public String home() {
         return "login";
     }
 
-    // 🔥 👉 ADD STEP 2 HERE (inside class, not outside)
+    // Login handler
     @PostMapping("/login")
     public String login(@RequestParam String username,
                         @RequestParam String password,
@@ -35,7 +35,7 @@ public class DemoexampleApplication {
         }
     }
 
-    // Optional test endpoint
+    // Test endpoint
     @GetMapping("/hello")
     public String hello(Model model) {
         model.addAttribute("message", "Hello World");
