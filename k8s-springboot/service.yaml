@@ -3,11 +3,14 @@ kind: Service
 metadata:
   name: springboot-demo-service
   namespace: springboot-demo
+  labels:
+    app: springboot-demo
 spec:
   selector:
     app: springboot-demo
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
       targetPort: 8081
   type: ClusterIP
